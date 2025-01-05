@@ -15,10 +15,11 @@ function subbedNums(...numbers) {
     for (let i = 1; i < numbers.length; i++) {
         total -= numbers[i];
     }
-    console.log(total);
+    return total;
 } // Refactor using an array method later
 
-subbedNums(10, 5); 
+
 // Adding division function
+
 
 // Adding multiplication function
