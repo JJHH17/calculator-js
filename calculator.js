@@ -20,6 +20,13 @@ function subbedNums(...numbers) {
 
 
 // Adding division function
+function diviNums(...numbers) { 
+    let total = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        total /= numbers[i];
+    }
+    return total;
+} // Refactor later using an array method
 
 
 // Adding multiplication function
