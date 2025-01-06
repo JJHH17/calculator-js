@@ -26,4 +26,6 @@
 #output {
     padding-right: 67px;
     padding-top: 10px;
+    border: 2px solid black;
 }
+
