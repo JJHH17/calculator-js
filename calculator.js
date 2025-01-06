@@ -5,44 +5,40 @@ let numberTwo;
 
 // Adding addition function
 // First iteration will parse an array, which enables greater scaleability than taking a number of nums
-function summedNums(...numbers) {
-    let total = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        total += numbers[i];
-        return total;
-    }
-} // Refactor above using a method later 
+function summedNums(number1, number2) {
+    return number1 + number2;
+} 
 
 
 // Adding subtraction function
-function subbedNums(...numbers) {
-    let total = numbers[0];
-    for (let i = 1; i < numbers.length; i++) {
-        total -= numbers[i];
-        return total;
-    }
-} // Refactor using an array method later
-
+function subbedNums(number1, number2) {
+    return number1 - number2; 
+}
 
 // Adding division function
-function diviNums(...numbers) { 
-    let total = numbers[0];
-    if (numbers[0] === 0) {
-        return 'You cannot divide by 1';
-    }else {
-        for (let i = 1; i < numbers.length; i++) {
-        total /= numbers[i];
-        return total;
+function diviNums(number1, number2) { 
+    if (number1 === 0) {
+        return 'You can\'t divide by zero!'; //Zero division handling
+    } else {
+        return number1 / number2;
     }
-    }
-} // Refactor later using an array method
+}
 
 
 // Adding multiplication function
-function multiNums(...numbers) {
-    let total = numbers[0];
-    for (let i = 0; i < numbers.length; i++) {
-        total *= numbers[i];
-        return total;
+function multiNums(number1, number2) {
+    return number1 * number2;
+}
+
+// Creation of operate function, takes 2 numbers, calls one of the functions based on operator entered
+function operate(number1, operator, number2) {
+    if (operator === '+') {
+        summedNums(number1, number2);
+    } else if (operator === '-') {
+        subbedNums(number1, number2);
+    } else if (operator === '/') {
+        diviNums(number1, number2);
+    } else if (operator === '*') {
+        multiNums(number1, number2);
     }
 }
