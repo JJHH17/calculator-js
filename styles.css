@@ -2,3 +2,28 @@
     display: flex;
     justify-content: center;
 }
+
+.display > button {
+    padding: 10px
+}
+
+.topRow > button {
+    padding: 10px
+}
+
+.middleRow > button {
+    padding: 10px;
+}
+
+.thirdRow > button {
+    padding: 10px;
+}
+
+.bottomRow > button {
+    padding: 10px;
+}
+
+#output {
+    padding-right: 67px;
+    padding-top: 10px;
+}
