@@ -1,0 +1,4 @@
+.display, .topRow, .middleRow, .thirdRow, .bottomRow{
+    display: flex;
+    justify-content: center;
+}
