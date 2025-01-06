@@ -4,8 +4,8 @@ function summedNums(...numbers) {
     let total = 0;
     for (let i = 0; i < numbers.length; i++) {
         total += numbers[i];
+        return total;
     }
-    return total;
 } // Refactor above using a method later 
 
 
@@ -14,19 +14,30 @@ function subbedNums(...numbers) {
     let total = numbers[0];
     for (let i = 1; i < numbers.length; i++) {
         total -= numbers[i];
+        return total;
     }
-    return total;
 } // Refactor using an array method later
 
 
 // Adding division function
 function diviNums(...numbers) { 
     let total = numbers[0];
-    for (let i = 1; i < numbers.length; i++) {
+    if (numbers[0] === 0) {
+        return 'You cannot divide by 1';
+    }else {
+        for (let i = 1; i < numbers.length; i++) {
         total /= numbers[i];
+        return total;
     }
-    return total;
+    }
 } // Refactor later using an array method
 
 
 // Adding multiplication function
+function multiNums(...numbers) {
+    let total = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        total *= numbers[i];
+        return total;
+    }
+}
