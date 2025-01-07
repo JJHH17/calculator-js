@@ -41,9 +41,22 @@ function operate(number1, operator, number2) {
     }
 }
 
+// clear button 
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", () => {
+    numberOne = 0;
+    numberTwo = 0;
+})
+
+// display 
+
+
+
 // Adding event listeners for calculator buttons
 const one = document.querySelector("#one");
 // add event of clicking button 
+
+
 const two = document.querySelector("#two");
 // add event of clicking button
 const three = document.querySelector("#three");
