@@ -1,6 +1,8 @@
 // Adding number, operation, 2nd number variables for storage
 let numberOne;
+let numberOneDisplay = true;
 let operator;
+let numberTwoDisplay = false;
 let numberTwo; 
 
 // Adding addition function
@@ -46,9 +48,19 @@ const clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
     numberOne = 0;
     numberTwo = 0;
-})
+});
 
 // display 
+const display = document.querySelector("#output");
+// While num 1 display == true, display num 1 
+if (numberOneDisplay === true && numberTwoDisplay === false) {
+    display.textContent = numberOne;
+
+} else if (numberTwoDisplay === true && numberOneDisplay === false) {
+    display.textContent = numberTwo
+}
+// once operator selected, display num 2 via display num1 false, num2 display true
+// once calculated, display answer
 
 
 
