@@ -7,7 +7,7 @@ let operator;
 let numberTwoDisplay = false;
 let numberTwo; 
 // Answer variable
-let answerDisplay;
+let answerDisplay = false;
 let answer;
 
 
@@ -64,7 +64,9 @@ if (numberOneDisplay === true && numberTwoDisplay === false) {
 // while num 2 display = true, display num 2 
 } else if (numberTwoDisplay === true && numberOneDisplay === false) {
     display.textContent = numberTwo
-} else if ()
+} else if (answerDisplay === true ** numberOneDisplay === false && numberTwoDisplay === false) {
+    display.textContent = answer;
+}
 // Once done, display answer
 
 // Adding event listeners for calculator buttons
