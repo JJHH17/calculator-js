@@ -1,9 +1,15 @@
 // Adding number, operation, 2nd number variables for storage
 let numberOne;
+// Dictates whether numberOne displays
 let numberOneDisplay = true;
 let operator;
+// Dictates whether numberTwo displays
 let numberTwoDisplay = false;
 let numberTwo; 
+// Answer variable
+let answerDisplay;
+let answer;
+
 
 // Adding addition function
 // First iteration will parse an array, which enables greater scaleability than taking a number of nums
@@ -55,14 +61,11 @@ const display = document.querySelector("#output");
 // While num 1 display == true, display num 1 
 if (numberOneDisplay === true && numberTwoDisplay === false) {
     display.textContent = numberOne;
-
+// while num 2 display = true, display num 2 
 } else if (numberTwoDisplay === true && numberOneDisplay === false) {
     display.textContent = numberTwo
-}
-// once operator selected, display num 2 via display num1 false, num2 display true
-// once calculated, display answer
-
-
+} else if ()
+// Once done, display answer
 
 // Adding event listeners for calculator buttons
 const one = document.querySelector("#one");
