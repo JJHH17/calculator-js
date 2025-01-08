@@ -1,11 +1,11 @@
 // Adding number, operation, 2nd number variables for storage
-let numberOne;
+let numberOne = '';
 // Dictates whether numberOne displays
 let numberOneDisplay = true;
 let operator;
 // Dictates whether numberTwo displays
 let numberTwoDisplay = false;
-let numberTwo; 
+let numberTwo = ''; 
 // Answer variable
 let answerDisplay = false;
 let answer;
@@ -52,8 +52,9 @@ function operate(number1, operator, number2) {
 // clear button 
 const clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
-    numberOne = 0;
-    numberTwo = 0;
+    numberOne = '';
+    numberTwo = '';
+    display.textContent = numberOne;
 });
 
 // display 
@@ -61,18 +62,24 @@ const display = document.querySelector("#output");
 // While num 1 display == true, display num 1 
 if (numberOneDisplay === true && numberTwoDisplay === false) {
     display.textContent = numberOne;
-// while num 2 display = true, display num 2 
+// While num 2 display == true, display num 2 
 } else if (numberTwoDisplay === true && numberOneDisplay === false) {
-    display.textContent = numberTwo
-} else if (answerDisplay === true ** numberOneDisplay === false && numberTwoDisplay === false) {
+    display.textContent = numberTwo;
+// While answer display == true, display answer 
+} else if (answerDisplay === true && numberOneDisplay === false && numberTwoDisplay === false) {
     display.textContent = answer;
 }
-// Once done, display answer
+
 
 // Adding event listeners for calculator buttons
 const one = document.querySelector("#one");
 // add event of clicking button 
-
+one.addEventListener("click", () => {
+    // If number 1 true
+    numberOne += '1';
+    display.textContent = numberOne;
+    // if number 2 true and number 1 false
+});
 
 const two = document.querySelector("#two");
 // add event of clicking button
