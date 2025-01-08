@@ -76,28 +76,133 @@ const one = document.querySelector("#one");
 // add event of clicking button 
 one.addEventListener("click", () => {
     // If number 1 true
-    numberOne += '1';
-    display.textContent = numberOne;
-    // if number 2 true and number 1 false
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '1';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '1';
+        display.textContent = numberTwo;
+    }
 });
 
 const two = document.querySelector("#two");
 // add event of clicking button
+two.addEventListener("click", () => {
+    // if number 1 true
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '2';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '2';
+        display.textContent = numberTwo;
+    }
+});
+
 const three = document.querySelector("#three");
 // add event of clicking button
+three.addEventListener("click", () => {
+    // if number 1 true
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '3';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '3';
+        display.textContent = numberTwo;
+    }
+});
+
 const four = document.querySelector("#four");
 // add event of clicking button 
+four.addEventListener("click", () => {
+    // if number 1 true
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '4';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '4';
+        display.textContent = numberTwo;
+    }
+});
+
 const five = document.querySelector("#five");
 // add event of clicking button
+five.addEventListener("click", () => {
+    // if number 1 true
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '5';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '5';
+        display.textContent = numberTwo;
+    }
+});
+
 const six = document.querySelector("#six");
 // add event of clicking button 
+six.addEventListener("click", () => {
+    // if number 1 true
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '6';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '6';
+        display.textContent = numberTwo;
+    }
+});
+
 const seven = document.querySelector("#seven");
 // add event of clicking button
+seven.addEventListener("click", () => {
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '7';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '7';
+        display.textContent = numberTwo;
+    }
+}); 
+
 const eight = document.querySelector("#eight");
 // add event of clicking button
+eight.addEventListener("click", () => {
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '8';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '8';
+        display.textContent = numberTwo;
+    }
+});
+
 const nine = document.querySelector("#nine");
 // add event of clicking button
+nine.addEventListener("click", () => {
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '9';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '9';
+        display.textContent = numberTwo;
+    }
+});
+
 const zero = document.querySelector("#zero");
 // Add event of clicking button
+zero.addEventListener("click", () => {
+    if (numberOneDisplay == true && numberTwoDisplay == false) {
+        numberOne += '0';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+        numberTwo += '0';
+        display.textContent = numberTwo;
+    }
+});
 
 // Add operator buttons 
+// Addition
+const addition = document.querySelector("#plus");
+addition.addEventListener("click", () => {
+
+    // call addition function
+
+});
