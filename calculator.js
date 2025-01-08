@@ -10,7 +10,6 @@ let numberTwo = '';
 let answerDisplay = false;
 let answer;
 
-
 // Adding addition function
 // First iteration will parse an array, which enables greater scaleability than taking a number of nums
 function summedNums(number1, number2) {
@@ -55,6 +54,9 @@ clear.addEventListener("click", () => {
     numberOne = '';
     numberTwo = '';
     display.textContent = numberOne;
+    // reverts display back to showing num 1 
+    numberTwoDisplay = false;
+    numberOneDisplay = true;
 });
 
 // display 
@@ -202,7 +204,11 @@ zero.addEventListener("click", () => {
 // Addition
 const addition = document.querySelector("#plus");
 addition.addEventListener("click", () => {
+    // change from num 1 > num 2 on display
+    numberOneDisplay = false;
+    numberTwoDisplay = true;
+    //use both numbers in the additional function
 
-    // call addition function
+    // append to answer variable
 
 });
