@@ -54,6 +54,7 @@ clear.addEventListener("click", () => {
     numberOne = '';
     numberTwo = '';
     answer = '';
+    operator = '';
     display.textContent = numberOne;
     // reverts display back to showing num 1 
     numberTwoDisplay = false;
@@ -208,7 +209,10 @@ const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
     numberOneDisplay = false;
     numberTwoDisplay = false;
-    if (operator = '+') {
+    if (operator == '+') {
+        operate(numberOne, operator, numberTwo);
+        display.textContent = answer;
+    } else if (operator == '-') {
         operate(numberOne, operator, numberTwo);
         display.textContent = answer;
     }
@@ -219,12 +223,18 @@ const plus = document.querySelector("#plus");
 plus.addEventListener("click", () => {
     numberOneDisplay = false;
     numberTwoDisplay= true;
-    // in answer, if this button pressed, answer is plussed
-    // may need to review this
+    // tweaks operator variable, triggers next point
     operator = "+";
 });
 
 // handles subtraction
+const subtraction = document.querySelector("#subtract");
+subtraction.addEventListener("click", () => {
+    numberOneDisplay = false;
+    numberTwoDisplay = true;
+    // tweaks operator variable, triggers next step
+    operator = "-";
+});
 
 // Handles division
 
