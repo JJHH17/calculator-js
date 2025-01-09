@@ -201,7 +201,9 @@ zero.addEventListener("click", () => {
     }
 });
 
-// put equals operator here
+// handles decimal/.
+
+// handles equals operator
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
     numberOneDisplay = false;
@@ -209,7 +211,6 @@ equals.addEventListener("click", () => {
     if (operator = '+') {
         operate(numberOne, operator, numberTwo);
         display.textContent = answer;
-
     }
 });
 
@@ -223,3 +224,8 @@ plus.addEventListener("click", () => {
     operator = "+";
 });
 
+// handles subtraction
+
+// Handles division
+
+// handles times 
