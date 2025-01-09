@@ -27,7 +27,7 @@ function diviNums(number1, number2) {
         alert('You can\'t divide by zero!'); //Zero division handling
     } else {
         answer = parseInt(number1) / parseInt(number2);
-    }
+    } // add handling of large decimals
 }
 
 // Adding multiplication function
@@ -215,6 +215,12 @@ equals.addEventListener("click", () => {
     } else if (operator == '-') {
         operate(numberOne, operator, numberTwo);
         display.textContent = answer;
+    } else if (operator == '/') {
+        operate(numberOne, operator, numberTwo);
+        display.textContent = answer;
+    } else if (operator == '*') {
+        operate(numberOne, operator, numberTwo);
+        display.textContent = answer;
     }
 });
 
@@ -237,5 +243,19 @@ subtraction.addEventListener("click", () => {
 });
 
 // Handles division
+const division = document.querySelector("#divide");
+division.addEventListener("click", () => {
+    numberOneDisplay = false;
+    numberTwoDisplay = true;
+    // tweaks operator value, triggers next step
+    operator = "/";
+});
 
 // handles times 
+const times = document.querySelector("#times");
+times.addEventListener("click", () => {
+    numberOneDisplay = false;
+    numberTwoDisplay = true;
+    // tweaks operator value, triggers next step
+    operator = "*";
+});
