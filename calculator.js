@@ -2,7 +2,7 @@
 let numberOne = '';
 // Dictates whether numberOne displays
 let numberOneDisplay = true;
-let operator;
+let operator = '';
 // Dictates whether numberTwo displays
 let numberTwoDisplay = false;
 let numberTwo = ''; 
@@ -10,16 +10,15 @@ let numberTwo = '';
 let answerDisplay = false;
 let answer = '';
 
-// Adding addition function
-// First iteration will parse an array, which enables greater scaleability than taking a number of nums
+// Addition function
 function summedNums(number1, number2) {
     answer = parseInt(number1) + parseInt(number2);
-} 
+}  // handle large decimals - TODO 
 
 // Adding subtraction function
 function subbedNums(number1, number2) {
     answer = parseInt(number1) - parseInt(number2); 
-}
+} // TODO - Handle large decimals
 
 // Adding division function
 function diviNums(number1, number2) { 
@@ -27,15 +26,15 @@ function diviNums(number1, number2) {
         alert('You can\'t divide by zero!'); //Zero division handling
     } else {
         answer = parseInt(number1) / parseInt(number2);
-    } // add handling of large decimals
-}
+    } 
+} // TODO - Handle large decimals
 
 // Adding multiplication function
 function multiNums(number1, number2) {
     answer = parseInt(number1) * parseInt(number2);
-}
+} // TODO - Handle large decimals
 
-// Creation of operate function, takes 2 numbers, calls one of the functions based on operator entered
+// Dictates which function will run based on value of operator variable
 function operate(number1, operator, number2) {
     if (operator === '+') {
         summedNums(number1, number2);
@@ -48,7 +47,7 @@ function operate(number1, operator, number2) {
     }
 }
 
-// clear button 
+// clear button behaviour
 const clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
     numberOne = '';
@@ -56,17 +55,17 @@ clear.addEventListener("click", () => {
     answer = '';
     operator = '';
     display.textContent = numberOne;
-    // reverts display back to showing num 1 
+    // reverts display back to showing num 1 upon press
     numberTwoDisplay = false;
     numberOneDisplay = true;
 });
 
-// display 
+// display behaviour (displays numbers entered on calculator)
 const display = document.querySelector("#output");
-// While num 1 display == true, display num 1 
+// While num 1 display == true, display number 1 
 if (numberOneDisplay) {
     display.textContent = numberOne;
-// While num 2 display == true, display num 2 
+// While num 2 display == true, display number 2 
 } else if (numberTwoDisplay) {
     display.textContent = numberTwo;
 // While answer display == true, display answer 
@@ -74,8 +73,7 @@ if (numberOneDisplay) {
     display.textContent = answer;
 }
 
-
-// Adding event listeners for calculator buttons
+// Following section covers the buttons on the UI
 const one = document.querySelector("#one");
 // add event of clicking button 
 one.addEventListener("click", () => {
@@ -93,10 +91,10 @@ const two = document.querySelector("#two");
 // add event of clicking button
 two.addEventListener("click", () => {
     // if number 1 true
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '2';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '2';
         display.textContent = numberTwo;
     }
@@ -106,10 +104,10 @@ const three = document.querySelector("#three");
 // add event of clicking button
 three.addEventListener("click", () => {
     // if number 1 true
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '3';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '3';
         display.textContent = numberTwo;
     }
@@ -119,10 +117,10 @@ const four = document.querySelector("#four");
 // add event of clicking button 
 four.addEventListener("click", () => {
     // if number 1 true
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '4';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '4';
         display.textContent = numberTwo;
     }
@@ -132,10 +130,10 @@ const five = document.querySelector("#five");
 // add event of clicking button
 five.addEventListener("click", () => {
     // if number 1 true
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '5';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '5';
         display.textContent = numberTwo;
     }
@@ -145,10 +143,10 @@ const six = document.querySelector("#six");
 // add event of clicking button 
 six.addEventListener("click", () => {
     // if number 1 true
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '6';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '6';
         display.textContent = numberTwo;
     }
@@ -157,10 +155,10 @@ six.addEventListener("click", () => {
 const seven = document.querySelector("#seven");
 // add event of clicking button
 seven.addEventListener("click", () => {
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '7';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '7';
         display.textContent = numberTwo;
     }
@@ -169,10 +167,10 @@ seven.addEventListener("click", () => {
 const eight = document.querySelector("#eight");
 // add event of clicking button
 eight.addEventListener("click", () => {
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '8';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '8';
         display.textContent = numberTwo;
     }
@@ -181,10 +179,10 @@ eight.addEventListener("click", () => {
 const nine = document.querySelector("#nine");
 // add event of clicking button
 nine.addEventListener("click", () => {
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '9';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '9';
         display.textContent = numberTwo;
     }
@@ -193,10 +191,10 @@ nine.addEventListener("click", () => {
 const zero = document.querySelector("#zero");
 // Add event of clicking button
 zero.addEventListener("click", () => {
-    if (numberOneDisplay == true && numberTwoDisplay == false) {
+    if (numberOneDisplay) {
         numberOne += '0';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay == true && numberOneDisplay == false) {
+    } else if (numberTwoDisplay) {
         numberTwo += '0';
         display.textContent = numberTwo;
     }
@@ -206,9 +204,11 @@ zero.addEventListener("click", () => {
 const decimal = document.querySelector("#decimal");
 decimal.addEventListener("click", () => {
     if (numberOneDisplay) {
+        // Error handling decimal before num here
         numberOne += '.';
         display.textContent = numberOne;
     } else if (numberTwoDisplay) {
+        // error handling decimal before num here
         numberTwo += '.';
         display.textContent = numberTwo;
     }
