@@ -203,6 +203,16 @@ zero.addEventListener("click", () => {
 });
 
 // handles decimal/.
+const decimal = document.querySelector("#decimal");
+decimal.addEventListener("click", () => {
+    if (numberOneDisplay) {
+        numberOne += '.';
+        display.textContent = numberOne;
+    } else if (numberTwoDisplay) {
+        numberTwo += '.';
+        display.textContent = numberTwo;
+    }
+});
 
 // handles equals operator
 const equals = document.querySelector("#equals");
