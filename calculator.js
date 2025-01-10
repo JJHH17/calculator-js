@@ -203,11 +203,11 @@ zero.addEventListener("click", () => {
 // handles decimal/.
 const decimal = document.querySelector("#decimal");
 decimal.addEventListener("click", () => {
-    if (numberOneDisplay) {
+    if (numberOneDisplay && numberOne < 9) {
         // Error handling decimal before num here
         numberOne += '.';
         display.textContent = numberOne;
-    } else if (numberTwoDisplay) {
+    } else if (numberTwoDisplay && numberTwo < 9) {
         // error handling decimal before num here
         numberTwo += '.';
         display.textContent = numberTwo;
