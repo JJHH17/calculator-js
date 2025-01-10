@@ -2,13 +2,17 @@ body {
     background-color: rgb(224, 220, 220);
 }
 
+#title {
+    text-align: center;
+}
+
 .display, .topRow, .middleRow, .thirdRow, .bottomRow{
     display: flex;
     justify-content: center;
 }
 
 .display > #output {
-    padding-right: 150px
+    width: 80px;    
 }
 
 .display > button {
