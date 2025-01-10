@@ -12,27 +12,27 @@ let answer = 0;
 
 // Addition function
 function summedNums(number1, number2) {
-    answer = parseInt(number1) + parseInt(number2);
-}  // handle large decimals - TODO 
+    answer = parseFloat((parseFloat(number1) + parseFloat(number2)).toFixed(3));
+}  // Above rounds the answer to 3 decimals
 
 // Adding subtraction function
 function subbedNums(number1, number2) {
-    answer = parseInt(number1) - parseInt(number2); 
-} // TODO - Handle large decimals
+    answer = parseFloat((parseFloat(number1) - parseFloat(number2)).toFixed(3)); 
+} // Above rounds the answer to 3 decimals
 
 // Adding division function
 function diviNums(number1, number2) { 
-    if (number1 === '0') {
+    if (number1 === '0' || number2 === '0') {
         alert('You can\'t divide by zero!'); //Zero division handling
     } else {
-        answer = parseInt(number1) / parseInt(number2);
-    } 
-} // TODO - Handle large decimals
+        answer = parseFloat((parseFloat(number1) / parseFloat(number2)).toFixed(3));
+    } // Above rounds the answer to 3 decimals
+} 
 
 // Adding multiplication function
 function multiNums(number1, number2) {
-    answer = parseInt(number1) * parseInt(number2);
-} // TODO - Handle large decimals
+    answer = parseFloat((parseFloat(number1) * parseFloat(number2)).toFixed(3));
+} // Above rounds answer to 3 decimals
 
 // Dictates which function will run based on value of operator variable
 function operate(number1, operator, number2) {
