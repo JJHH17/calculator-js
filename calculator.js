@@ -8,7 +8,7 @@ let numberTwoDisplay = false;
 let numberTwo = ''; 
 // Answer variable
 let answerDisplay = false;
-let answer = '';
+let answer = 0;
 
 // Addition function
 function summedNums(number1, number2) {
@@ -217,22 +217,17 @@ decimal.addEventListener("click", () => {
 // handles equals operator
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
-    numberOneDisplay = false;
-    numberTwoDisplay = false;
-    if (operator == '+') {
+    if (numberOne !== '' && numberTwo !== '' && operator) {
         operate(numberOne, operator, numberTwo);
         display.textContent = answer;
-    } else if (operator == '-') {
-        operate(numberOne, operator, numberTwo);
-        display.textContent = answer;
-    } else if (operator == '/') {
-        operate(numberOne, operator, numberTwo);
-        display.textContent = answer;
-    } else if (operator == '*') {
-        operate(numberOne, operator, numberTwo);
-        display.textContent = answer;
+        numberOne = answer.toString(); // Update numberOne with the result/answer, parses to string
+        numberTwo = '';               // Reset numberTwo variable
+        operator = '';                // Resets operator, ready to be reused in other calls
+        numberOneDisplay = true;      // Ready for new input, if followed up
+        numberTwoDisplay = false;
     }
 });
+
 
 const plus = document.querySelector("#plus");
 // Add event of pressing plus button
