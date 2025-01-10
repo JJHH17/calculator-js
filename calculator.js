@@ -228,7 +228,6 @@ equals.addEventListener("click", () => {
     }
 });
 
-
 const plus = document.querySelector("#plus");
 // Add event of pressing plus button
 plus.addEventListener("click", () => {
@@ -266,3 +265,18 @@ times.addEventListener("click", () => {
 });
 
 // Adding support for backspace/deletion behaviour
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Backspace") {
+        event.preventDefault(); // Default behaviour == going back on browser, this method prevents that
+
+        if (numberOneDisplay && numberOne.length > 0) {
+            // Remove the last character from numberOne - IF over 0 
+            numberOne = numberOne.slice(0, -1); // Removes last character
+            display.textContent = numberOne || "0"; // Reverts to 0 if empty
+        } else if (numberTwoDisplay && numberTwo.length > 0) {
+            // Remove the last character from numberTwo
+            numberTwo = numberTwo.slice(0, -1);
+            display.textContent = numberTwo || "0"; // Reverts to 0 if empty
+        }
+    }
+});
