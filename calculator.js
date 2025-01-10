@@ -280,3 +280,26 @@ document.addEventListener("keydown", (event) => {
         }
     }
 });
+
+// Adding key/number support, follows same logic as backspace
+document.addEventListener("keydown", (event) => {
+    const validKeys = "0123456789.";
+    const key = event.key;
+
+    // Check if the key pressed is a valid number or decimal
+    if (validKeys.includes(key)) {
+        if (numberOneDisplay && numberOne.length < 9) {
+            // Prevent multiple decimals
+            if (key === "." && numberOne.includes(".")) return;
+
+            numberOne += key;
+            display.textContent = numberOne;
+        } else if (numberTwoDisplay && numberTwo.length < 9) {
+            // Prevent multiple decimals
+            if (key === "." && numberTwo.includes(".")) return;
+
+            numberTwo += key;
+            display.textContent = numberTwo;
+        }
+    }
+});
